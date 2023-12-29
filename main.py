@@ -33,6 +33,7 @@ def main():
 
     for idx, token in enumerate(token_string):
         result = ali.aliyundrive_check_in(token)
+        print(result)
         message_all.append(str(result))
 
         if idx < len(token_string) - 1:
