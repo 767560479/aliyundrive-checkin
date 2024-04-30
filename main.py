@@ -58,18 +58,19 @@ def definesys():
       'token': f'{token}'
     }
     
-   print('开始请求')
-   response = requests.request("GET", url, headers=headers)
-   print(response)
+    print('开始请求')
+    response = requests.request("GET", url, headers=headers)
+    print(response)
 
    # 检查响应状态码
-   if response.status_code == 200:
-       print('请求成功！')
-       # 处理响应数据
-       data = response.json()
-       print(data)
+    if response.status_code == 200:
+
+        print('请求成功！')
+        # 处理响应数据
+        data = response.json()
+        print(data)
     else:
-       print('请求失败，状态码：', response.status_code)
+        print('请求失败，状态码：', response.status_code)
     
 
 
