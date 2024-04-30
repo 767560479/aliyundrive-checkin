@@ -3,6 +3,7 @@ import re
 import argparse
 from aliyundrive import Aliyundrive
 from message_send import MessageSend
+import requests
 
 
 def main():
@@ -49,5 +50,29 @@ def main():
     print('finish')
 
 
+def definesys():
+    url = "https://edu.definesys.cn/edu-api/forumSign/sign"
+    token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MTUzNDg4MzYsImlhdCI6MTcxMjc1NjgzNiwieGRhcHVzZXJpZCI6IjEwMDM5MzA3MTE2MjgxNDM2NTY5NiJ9.YAhyUT-N1VMKsPqpMwlZaMrPCslPb8T0-HLbwv5sQWLYKFeZ40ycoA1ox9h3c5kS5LBOOnl4bXmmyGUbgJYS7g'
+    # 请求头 添加token
+    headers = {
+      'token': f'{token}'
+    }
+   print('开始请求')
+  response = requests.request("GET", url, headers=headers)
+  print(response)
+
+# 检查响应状态码
+  if response.status_code == 200:
+      print('请求成功！')
+      # 处理响应数据
+      data = response.json()
+      print(data)
+  else:
+      print('请求失败，状态码：', response.status_code)
+    
+
+
+
 if __name__ == '__main__':
     main()
+    definesys()
