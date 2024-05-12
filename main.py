@@ -52,7 +52,7 @@ def main():
 
 def definesys():
     url = "https://edu.definesys.cn/edu-api/forumSign/sign"
-    token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MTUzNDg4MzYsImlhdCI6MTcxMjc1NjgzNiwieGRhcHVzZXJpZCI6IjEwMDM5MzA3MTE2MjgxNDM2NTY5NiJ9.YAhyUT-N1VMKsPqpMwlZaMrPCslPb8T0-HLbwv5sQWLYKFeZ40ycoA1ox9h3c5kS5LBOOnl4bXmmyGUbgJYS7g'
+    token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3MTgxMTE3MzIsImlhdCI6MTcxNTUxOTczMiwieGRhcHVzZXJpZCI6IjEwMDM5MzA3MTE2MjgxNDM2NTY5NiJ9.R4OWocSYCGXaIh-_O7exz0ewem0DdtlpHa2XQYeceh7-iPOr9kGPB7ia7f7amfg8VyJ_Xy01RiDnEgrQDALXJg'
     # 请求头 添加token
     headers = {
       'token': f'{token}'
